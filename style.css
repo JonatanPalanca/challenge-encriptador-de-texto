@@ -1,0 +1,199 @@
+/* General Styles */
+* {
+    background: #E5E5E5;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 1.5;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    margin: 0;
+}
+header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+.logo {
+    width: 10%;
+    max-width: 150px;
+    height: auto;
+}
+main {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+section {
+    width: 45%;
+}
+.entrada-texto, .salida-texto {
+    width: 100%;
+    resize: none;
+    color: darkblue;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.entrada-texto::placeholder {
+    color: darkblue;
+}
+.entrada-texto:focus, .salida-texto:focus {
+    outline: none;
+}
+.salida-texto {
+    background: white;
+    background-image: url(imagenes/notexto.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 250px;
+    box-shadow: 0 24px 32px -8px rgba(0, 0, 0, 0.08);
+}
+.restriccion {
+    color: grey;
+    font-size: 16px;
+}
+.botones {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 18px;
+}
+.encriptar, .desencriptar {
+    flex: 1;
+    color: #D8DFE8;
+    background: darkblue;
+    border: 1px solid darkblue;
+    border-radius: 25px;
+    cursor: pointer;
+    height: 67px;
+    margin: 0 10px;
+}
+.desencriptar {
+    background: #D8DFE8;
+    color: darkblue;
+}
+.dinamico {
+    background: transparent;
+    text-align: center;
+    position: relative;
+}
+.texto1 {
+    font-size: 24px;
+    font-weight: bold;
+}
+.texto2 {
+    font-size: 16px;
+}
+.copiar {
+    color: darkblue;
+    background: #D8DFE8;
+    border: 1px solid darkblue;
+    border-radius: 25px;
+    cursor: pointer;
+    height: 67px;
+    width: 100%;
+    margin-top: 20px;
+}
+.encriptar:hover, .desencriptar:hover, .copiar:hover {
+    background: #555;
+    color: white;
+}
+.anuncio {
+    display: none;
+    width: 300px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 10px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0.8;
+}
+footer {
+    text-align: center;
+    width: 100%;
+    background-color: darkblue;
+    padding: 15px;
+    position: absolute;
+    bottom: 0;
+}
+.copyright {
+    color: #D8DFE8;
+    background: transparent;
+    font-size: 15px;
+}
+
+/* Responsiveness */
+
+/* Laptop */
+@media screen and (max-width: 1366px) {
+    .logo {
+        width: 12%;
+    }
+    .entrada-texto {
+        height: 300px;
+    }
+    .salida-texto {
+        height: 230px;
+    }
+}
+
+/* Tablet */
+@media screen and (max-width: 768px) {
+    body {
+        flex-direction: column;
+        padding: 0 20px;
+    }
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+    section {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .logo {
+        width: 15%;
+    }
+    .entrada-texto {
+        height: 400px;
+    }
+    .salida-texto {
+        height: 230px;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 375px) {
+    .logo {
+        width: 30%;
+    }
+    .entrada-texto {
+        height: 340px;
+    }
+    .botones {
+        flex-direction: column;
+    }
+    .encriptar, .desencriptar {
+        width: 100%;
+        margin: 10px 0;
+        height: 50px;
+    }
+    .copiar {
+        height: 50px;
+        font-size: 20px;
+    }
+}
